@@ -1,10 +1,11 @@
 package tw.com.softleader.UnitTest;
 
 import org.junit.Before;
+import org.junit.Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class UserServiceTest {
     private static final String PASSWORD = "password";
@@ -24,10 +25,20 @@ public class UserServiceTest {
     private UserService userService;
 
     @Before
-    void setup(){
+    public void setup(){
         this.userRepository = createUserRepository();
         this.passwordEncoder = createPasswordEncoder();
         this.userService = new UserService(this.userRepository, this.passwordEncoder);
+    }
+
+    @Test
+    public void shouldBeValidForValidCredentials(){
+        boolean userIsValid = userService.isValidUser(ENABLED_USER.getId(), PASSWORD);
+        assertTrue(userIsValid);
+
+//        var a = verify(userRepository).findById(ENABLED_USER.getId());
+//        var b =verify(passwordEncoder).encode(PASSWORD);
+//        System.out.println();
     }
 
 
