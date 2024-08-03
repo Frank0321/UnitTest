@@ -13,6 +13,7 @@ import java.io.Serializable;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
@@ -30,6 +31,7 @@ public class CompanyUserEntity implements Serializable{
 	private static final long serialVersionUID = 4092320840720620698L;
 	
 	@Id
+	@GeneratedValue
 	private Integer userKey;
 	
 	@Basic
@@ -41,5 +43,7 @@ public class CompanyUserEntity implements Serializable{
 	@Basic
 	private String userName;
 	
+	@Basic
+	private Integer status;
 
 }

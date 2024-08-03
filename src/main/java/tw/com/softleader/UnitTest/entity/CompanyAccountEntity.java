@@ -10,9 +10,11 @@
 package tw.com.softleader.UnitTest.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
@@ -30,6 +32,7 @@ public class CompanyAccountEntity implements Serializable{
 	private static final long serialVersionUID = 1622797550826046750L;
 
 	@Id
+	@GeneratedValue
 	private Integer companyAccountKey;
 	
 	@Basic
@@ -38,4 +41,12 @@ public class CompanyAccountEntity implements Serializable{
 	@Basic
 	private String companyAccount;
 	
+	@Basic
+	private String currencyId;
+	
+	@Basic
+	private Integer permission;
+	
+	@Basic
+	private BigDecimal companyAccountValue;
 }
