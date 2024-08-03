@@ -9,6 +9,8 @@
 
 package tw.com.softleader.UnitTest.dao;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,5 +18,7 @@ import tw.com.softleader.UnitTest.entity.CompanyEntity;
 
 @Repository
 public interface CompanyDao extends JpaRepository<CompanyEntity, Integer>{
+	
+	List<CompanyEntity> findByCompanyUidAndStatus(String companyUid, Integer status);
 
 }
