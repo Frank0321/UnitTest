@@ -1,12 +1,15 @@
 package tw.com.softleader.UnitTest;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.mockito.Mockito.mock;
 
-import java.util.Collection;
 import java.util.Collections;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
+import org.junit.jupiter.api.Test;
+
+import tw.com.softleader.UnitTest.test1.Demo;
 
 public class MockitoDefaultValuesDemo {
 

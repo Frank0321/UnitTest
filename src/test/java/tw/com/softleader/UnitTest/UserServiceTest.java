@@ -3,6 +3,11 @@ package tw.com.softleader.UnitTest;
 import org.junit.Before;
 import org.junit.Test;
 
+import tw.com.softleader.UnitTest.test1.PasswordEncoder;
+import tw.com.softleader.UnitTest.test1.User;
+import tw.com.softleader.UnitTest.test1.UserRepository;
+import tw.com.softleader.UnitTest.test1.UserService;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
