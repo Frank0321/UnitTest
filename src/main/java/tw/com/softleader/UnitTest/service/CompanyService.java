@@ -25,6 +25,12 @@ public class CompanyService {
 	@Autowired
 	private CompanyDao companyDao;
 	
+	/***
+	 * 使用公司統編 找尋 目前的公司資料
+	 * 
+	 * @param companyUid
+	 * @return
+	 */
 	public Company findByCompanyUid(String companyUid) {
 		
 		Company company = new Company();
