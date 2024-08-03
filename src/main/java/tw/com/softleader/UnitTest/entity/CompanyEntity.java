@@ -49,7 +49,4 @@ public class CompanyEntity implements Serializable {
 	@Basic
 	private String phone;
 	
-	@Basic
-	private String email;
-	
 }
