@@ -7,14 +7,14 @@
  *   1) First Release.
  */
 
-package tw.com.softleader.UnitTest.dao;
+package tw.com.softleader.UnitTest.db.dao;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import tw.com.softleader.UnitTest.entity.CompanyAccountEntity;
+import tw.com.softleader.UnitTest.db.entity.CompanyAccountEntity;
 
 @Repository
 public interface CompanyAccountDao extends JpaRepository<CompanyAccountEntity, Integer>{

@@ -7,7 +7,7 @@
  *   1) First Release.
  */
 
-package tw.com.softleader.UnitTest.service;
+package tw.com.softleader.UnitTest.bean.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tw.com.softleader.UnitTest.bean.CompanyUser;
-import tw.com.softleader.UnitTest.dao.CompanyUserDao;
-import tw.com.softleader.UnitTest.entity.CompanyUserEntity;
+import tw.com.softleader.UnitTest.db.dao.CompanyUserDao;
+import tw.com.softleader.UnitTest.db.entity.CompanyUserEntity;
 
 @Service
 public class UserService {
@@ -27,16 +27,16 @@ public class UserService {
 	private CompanyUserDao companyUserDao;
 	
 	/***
-	 * 使用使用者名稱找尋使用者資料
+	 * 使用使用者 uid 找尋使用者資料
 	 * 
 	 * @param userName
 	 * @return
 	 */
-	public List<CompanyUser> findByUserName(String userName){
+	public List<CompanyUser> findByUserName(String userUid){
 		
 		List<CompanyUser> list = new ArrayList<>();
 	
-		List<CompanyUserEntity> companyUserEntities = companyUserDao.findByUserName(userName);
+		List<CompanyUserEntity> companyUserEntities = companyUserDao.findByUserUid(userUid);
 		
 		for (CompanyUserEntity entity : companyUserEntities) {
 			

@@ -1,16 +1,15 @@
 /**
- * @Description : 帳號 Entity
- * @ClassName : CompanyAccountEntity.java
+ * @Description : 公司 entity
+ * @ClassName : CompanyEntity.java
  * @Copyright : Copyright (c) 2024 
  * @ModifyHistory : 
  *  v1.00, 2024/08/03, frankchang
  *   1) First Release.
  */
 
-package tw.com.softleader.UnitTest.entity;
+package tw.com.softleader.UnitTest.db.entity;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
@@ -24,29 +23,30 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class CompanyAccountEntity implements Serializable{
+@Entity
+public class CompanyEntity implements Serializable {
 	
-	private static final long serialVersionUID = 1622797550826046750L;
+	private static final long serialVersionUID = -4875472268363365607L;
 
 	@Id
 	@GeneratedValue
-	private Integer companyAccountKey;
-	
-	@Basic
 	private Integer companyKey;
 	
 	@Basic
-	private String companyAccount;
+	private String companyUid;
 	
 	@Basic
-	private String currencyId;
+	private String companyName;
 	
 	@Basic
-	private Integer permission;
+	private Integer status;
 	
 	@Basic
-	private BigDecimal companyAccountValue;
+	private String address;
+	
+	@Basic
+	private String phone;
+	
 }

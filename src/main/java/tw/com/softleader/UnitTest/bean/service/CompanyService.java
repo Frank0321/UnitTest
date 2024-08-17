@@ -7,17 +7,18 @@
  *   1) First Release.
  */
 
-package tw.com.softleader.UnitTest.service;
+package tw.com.softleader.UnitTest.bean.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tw.com.softleader.UnitTest.bean.Company;
-import tw.com.softleader.UnitTest.dao.CompanyDao;
-import tw.com.softleader.UnitTest.entity.CompanyEntity;
+import tw.com.softleader.UnitTest.db.dao.CompanyDao;
+import tw.com.softleader.UnitTest.db.entity.CompanyEntity;
 
 @Service
 public class CompanyService {
@@ -31,7 +32,7 @@ public class CompanyService {
 	 * @param companyUid
 	 * @return
 	 */
-	public Company findByCompanyUid(String companyUid) {
+	public Optional<Company> findByCompanyUid(String companyUid) {
 		
 		Company company = new Company();
 		
@@ -43,8 +44,7 @@ public class CompanyService {
 		
 		BeanUtils.copyProperties(company, entities.get(0));
 		
-		return company;
-		
+		return Optional.of(company);
 		
 	}
 	

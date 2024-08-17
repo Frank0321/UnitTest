@@ -7,7 +7,7 @@
  *   1) First Release.
  */
 
-package tw.com.softleader.UnitTest.service;
+package tw.com.softleader.UnitTest.bean.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tw.com.softleader.UnitTest.bean.CompanyAccount;
-import tw.com.softleader.UnitTest.dao.CompanyAccountDao;
-import tw.com.softleader.UnitTest.entity.CompanyAccountEntity;
+import tw.com.softleader.UnitTest.db.dao.CompanyAccountDao;
+import tw.com.softleader.UnitTest.db.entity.CompanyAccountEntity;
 
 @Service
 public class AccountService {

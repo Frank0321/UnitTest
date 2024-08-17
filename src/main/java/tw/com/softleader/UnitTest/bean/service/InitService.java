@@ -7,7 +7,7 @@
  *   1) First Release.
  */
 
-package tw.com.softleader.UnitTest.service;
+package tw.com.softleader.UnitTest.bean.service;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -18,12 +18,12 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import tw.com.softleader.UnitTest.dao.CompanyAccountDao;
-import tw.com.softleader.UnitTest.dao.CompanyDao;
-import tw.com.softleader.UnitTest.dao.CompanyUserDao;
-import tw.com.softleader.UnitTest.entity.CompanyAccountEntity;
-import tw.com.softleader.UnitTest.entity.CompanyEntity;
-import tw.com.softleader.UnitTest.entity.CompanyUserEntity;
+import tw.com.softleader.UnitTest.db.dao.CompanyAccountDao;
+import tw.com.softleader.UnitTest.db.dao.CompanyDao;
+import tw.com.softleader.UnitTest.db.dao.CompanyUserDao;
+import tw.com.softleader.UnitTest.db.entity.CompanyAccountEntity;
+import tw.com.softleader.UnitTest.db.entity.CompanyEntity;
+import tw.com.softleader.UnitTest.db.entity.CompanyUserEntity;
 
 @Service
 public class InitService {

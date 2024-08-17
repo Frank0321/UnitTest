@@ -7,7 +7,7 @@
  *   1) First Release.
  */
 
-package tw.com.softleader.UnitTest.entity;
+package tw.com.softleader.UnitTest.db.entity;
 
 import java.io.Serializable;
 
